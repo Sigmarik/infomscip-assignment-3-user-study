@@ -7,7 +7,8 @@
 PACKAGE=acmart
 
 
-PDF = main.pdf
+
+PDF = INFOMSCIP-3-7.pdf
 
 
 all:  ${PDF}
@@ -28,6 +29,9 @@ all:  ${PDF}
 	pdflatex $<
 	while ( grep -q '^LaTeX Warning: Label(s) may have changed' $*.log) \
 	do pdflatex $<; done
+
+INFOMSCIP-3-7.pdf: main.pdf
+	cp main.pdf INFOMSCIP-3-7.pdf
 
 
 acmguide.pdf: $(PACKAGE).dtx $(PACKAGE).cls
