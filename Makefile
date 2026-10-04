@@ -7,7 +7,7 @@
 PACKAGE=acmart
 
 
-PDF = $(PACKAGE).pdf acmguide.pdf
+PDF = main.pdf
 
 
 all:  ${PDF}
@@ -18,6 +18,13 @@ all:  ${PDF}
 	pdflatex $<
 	- makeindex -s gind.ist -o $*.ind $*.idx
 	- makeindex -s gglo.ist -o $*.gls $*.glo
+	pdflatex $<
+	while ( grep -q '^LaTeX Warning: Label(s) may have changed' $*.log) \
+	do pdflatex $<; done
+
+%.pdf:  %.tex   $(PACKAGE).cls
+	pdflatex $<
+	- bibtex $*
 	pdflatex $<
 	while ( grep -q '^LaTeX Warning: Label(s) may have changed' $*.log) \
 	do pdflatex $<; done
