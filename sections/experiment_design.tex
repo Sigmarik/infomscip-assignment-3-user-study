@@ -1,26 +1,33 @@
 \section{Experiment design}
 
-\subsection{Subjects: who, number, (statistics on demographics) ...}
+\subsection{Participants}
 
-4 participants
-
-% TODO: Enter some actual data
+ We conducted a quantitative and qualitative study using 3 external participants.
+ These participants are P0 (Age 21), P1 (Age 26) and P2 (Age 25) respectively.
+ Consent to the usage of data was acquired by having the participants fill in a Google Form.
+ In addition, the participants were informed that they could withdraw from the study at any point.
 
 \subsection{Environment}
 
-A camera aimed at the participant's hands,
-with a screen showing the camera feed to the
-participant with a set delay.
-Participant't hands with the smartphone are
-obscured from their vision and only visible through the camera feed.
+The participants were seated in a small study cubicle with a table and a chair.
+Any distraction and noise was minimized.
 
-\subsection{Equipment / material used}
+\subsection{Equipment}
 
-A camera, a laptop screen with a delay, table, chair.
+We have performed a visual-latency study using a laptop screen and webcam.
+The setup gives a live-feed of the participants hands and phone behind the laptop screen,
+out of direct sight. The exact details of our setup are as follows:
 
-\subsection{Other contexts}
-
-The participant is seated
+\begin{itemize}
+	\item A medium-grade laptop with a 144 Hz refresh rate and a Nvidia GeForce RTX 3050 Laptop GPU.
+	\item A BlueBuilt Ultra HD 4K Webcam that supports 60 FPS with a 1080p resolution.
+		We favored a higher resolution over a higher quality to minimize any transmission latency that could
+		interfere with the experiment.
+	\item OBS Studio to create the software setup of reading the webcam feed,
+		positioning and scaling it on the screen and applying a visual delay in milliseconds.
+	\item The users own phone, with any form of auto-correction and spell-assist disabled.
+		This ensured that the users were most comfortable with their typing setup.
+\end{itemize}
 
 \subsection{Tasks to perform, instructions given, ...}
 
