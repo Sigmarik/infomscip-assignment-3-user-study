@@ -4,17 +4,18 @@
 
  We conducted a quantitative and qualitative study using 3 external participants.
  These participants are P0 (Age 21), P1 (Age 26) and P2 (Age 25) respectively.
- Consent to the usage of data was acquired by having the participants fill in a Google Form.
+ Consent to the usage of data was acquired by having the participants fill in a Google Form prior to the experiment.
  In addition, the participants were informed that they could withdraw from the study at any point.
 
 \subsection{Environment}
 
 The participants were seated in a small study cubicle with a table and a chair.
-Any distraction and noise was minimized.
+Any distraction and noise was minimized. Due to our setup, we could only perform
+our study with one participant at a time.
 
 \subsection{Equipment}
 
-We have performed a visual-latency study using a laptop screen and webcam.
+We have performed a visual-latency experiment using a laptop screen and webcam.
 The setup gives a live-feed of the participants hands and phone behind the laptop screen,
 out of direct sight. The exact details of our setup are as follows:
 
@@ -25,30 +26,46 @@ out of direct sight. The exact details of our setup are as follows:
 		interfere with the experiment.
 	\item OBS Studio to create the software setup of reading the webcam feed,
 		positioning and scaling it on the screen and applying a visual delay in milliseconds.
-	\item The users own phone, with any form of auto-correction and spell-assist disabled.
-		This ensured that the users were most comfortable with their typing setup.
+	\item The participant's own phone, with any form of auto-correction and spell-assist disabled.
+		This ensured that participants were most familiar with their keyboard layout.
 \end{itemize}
 
-\subsection{Tasks to perform, instructions given, ...}
+\subsection{Experiment Instructions}
 
-App: MonkeyType
+The participants were asked to open the website MonkeyType \cite{monkeytype} on their phones.
+\textit{MonkeyType} is a website that provides free and configurable typing tests with good analytics.
+The typing test performed was a random 50-word test using the english-1k word list of 1000 most common
+words in the English language. The first part of the experiment was then to let the participant
+get comfortable with the setup. These steps are outlined below:
 
-Fixed amount of words, 50 words per run, randomly generated from a set of 1000 words (english 1k MonkeyType test with 50-word text).
+\begin{enumerate}
+	\item Ask the participant to disable any auto-correction or assistive typing technologies on their
+		phone.
+	\item Let the participant position their hands comfortably around the laptop screen while holding the phone.
+	\item Adjust the camera and screen tilt to optimally show the participants hands and phone screen.
+	\item Set the visual latency to 0 ms, and let the participant do a test run on MonkeyType to get used to the setup.
+	\item If requested by the participant, fine-tune the camera tilt.
+\end{enumerate}
 
-\subsection{Within/between-subjects design}
+After the setup phase was completed, the participant was given 6 typing tests with latencies of
+0, 25, 50, 75, 100 and 200ms. The order in which these latencies were tested was randomized to avoid any
+learning artefacts. The procedure for each test was as follows:
 
-Within subject design
+\begin{enumerate}
+	\item Configure OBS Studio to use the correct visual latency. The participant was not informed
+		of the exact latency test they were given to prevent them from altering their typing behavior.
+	\item Verify the MonkeyType test settings on the participants phone and the configured visual latency.
+	\item Let the participant perform the typing test in their own time.
+	\item Copy the test analytics from the participant's phone to our data collection form.
+	\item Ask the user their comfort level with this particular test for use in the qualitative study.
+	\item Take a short break of 30 seconds to let the participants get comfortable.
+\end{enumerate}
 
-\subsection{Order (for within-subjects design) and other mappings (for both)}
+See Figure \ref{fig:experiment_setup} for the physical setup used in the experiment.
 
-Each participant is given two runs of the excersize with zero latency as a practice.
-
-Then they are given 5 runs of the excersize with different delays 
-(0ms, 25ms, 50ms, 75ms, 100ms) in a random order.
-
-\subsection{Other considerations, if any}
-
-Participants complete the test on their own smartphone,
-with their own typing style and keyboard layout. This
-is to eliminate the confounding factor of unfamiliarity
-with a new keyboard layout.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\linewidth]{resources/experiment_setup.jpg}
+	\caption{Experiment setup with laptop, webcam and phone screen.}
+	\label{fig:experiment_setup}
+\end{figure}
