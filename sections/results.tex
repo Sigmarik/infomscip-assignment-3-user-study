@@ -5,8 +5,34 @@
 % presentation style, relevance of the text (everything that is needed,
 % but no irrelevant and unnecessary information), etc. apply as well.
 
-Our qualitative findings can be represented into one of these themes :
-\begin{itemize}
-	\item \textbf{Relying on Intuition}: participants stopped relying on video feed and start switching to muscle memory.
-	\item \textbf{Second Guessing} : participants start doubting their keystrokes, causing pauses and unnecessary corrections.
-\end{itemize}
+Participants' typing performance measurements as displayed by MonkeyType, as well as their perceived comfort level were collected into a table.
+We have measured the typing speed in words per minute (WPM), accuracy in percentage, and comfort level on a scale from 1 to 5, where 1 is very uncomfortable and 5 is very comfortable, sample index (the order of appearance), the number of correctly typed characters, the number of incorrectly typed characters and the number of extra characters typed.
+
+To account for participants' typing speed difference, each individual participant's WPM was normalized to their average WPM across all tests.
+
+Participants' average WPM, accuracy and comfort level were plotted against the visual latency in milliseconds, as well as the sample index of the test. The plots are shown in Figure~\ref{fig:results}.
+
+\begin{figure}[H]
+    \centering
+    
+    \begin{subfigure}[b]{1.0\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{resources/nwpm-vs-latency.png}
+        \caption{Normalized WPM vs. latency.}
+        \label{fig:setup}
+    \end{subfigure}
+    
+    \vspace{1em}
+    
+    \begin{subfigure}[b]{1.0\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{resources/comfort-vs-latency.png}
+        \caption{Perceived comfort level vs. latency.}
+        \label{fig:comfort}
+    \end{subfigure}
+    
+    \caption{Participants' normalized words-per-minute (WPM) and perceived comfort level plotted against latency.}
+    \label{fig:results}
+\end{figure}
+
+
